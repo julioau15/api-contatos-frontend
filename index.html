@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/script/app.js" defer type="module"></script>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <title>Contatos</title>
+</head>
+<body>
+    <header>
+        <h1>Contatos</h1>
+    </header>
+
+    <main>
+        <form action="" id="form">
+
+            <div id="input-container">
+                <div class="input-box">
+
+                    <label for="name" class="form-label">
+                    Nome
+                    </label>
+
+                    <div class="input-field">
+                        <input 
+                        type="text" 
+                        name="name"
+                        id="name"
+                        placeholder="Digite seu nome"
+                        >
+
+                    </div>
+                </div>
+
+
+                <div class="input-box">
+                    <label for="telefone" class="form-label">
+                    Telefone
+                    </label>
+                    <div class="input-field">
+                        <input
+                        type="tel"
+                        name="telefone"
+                        id="telefone"
+                        placeholder="11 9 1234-2345"
+                        >
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="email" class="form-label">
+                    E-mail
+                    </label>
+                    <div class="input-field">
+                        <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="example@gmail.com"
+                        >
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="endereco" class="form-label">
+                    Endereço
+                    </label>
+                    <div class="input-field">
+                        <input
+                        type="text"
+                        name="endereco"
+                        id="endereco"
+                        placeholder="Rua. Lavandeira, 330"
+                        >
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="cidade" class="form-label">
+                    Cidade
+                    </label>
+                    <div class="input-field">
+                        <input
+                        type="text"
+                        name="cidade"
+                        id="cidade"
+                        placeholder="São Paulo"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-default">
+                Salvar Contato
+            </button>
+        </form>
+
+        <section id="contacts-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="container">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <span>&copy; Julio Augusto 2026</span>
+    </footer>
+</body>
+</html>
