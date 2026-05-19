@@ -1,7 +1,5 @@
 'use strict'
 
-import { putContato } from "./contatos"
-
 const montarLinhas = (dados) => {
     let linha = document.createElement('tr')
     let colId = document.createElement('td')
@@ -20,6 +18,10 @@ const montarLinhas = (dados) => {
     colEmail.textContent = dados.email
     colEndereco.textContent = dados.endereco
     colCidade.textContent = dados.cidade
+    btnAtualizar.id = 'btn-atualizar'
+    btnApagar.id = 'btn-apagar'
+
+    colAcao.replaceChildren(btnAtualizar, btnApagar)
 
     linha.replaceChildren(
         colId,
@@ -27,7 +29,8 @@ const montarLinhas = (dados) => {
         colTelefone,
         colEmail,
         colEndereco,
-        colCidade
+        colCidade,
+        colAcao
     )
     return linha
 }
