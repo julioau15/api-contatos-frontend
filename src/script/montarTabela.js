@@ -18,9 +18,14 @@ const montarLinhas = (dados) => {
     colEmail.textContent = dados.email
     colEndereco.textContent = dados.endereco
     colCidade.textContent = dados.cidade
-    btnAtualizar.id = 'btn-atualizar'
-    btnApagar.id = 'btn-apagar'
+    btnAtualizar.textContent = 'EDITAR'
+    btnApagar.textContent = 'APAGAR'
+    btnAtualizar.className = 'btn-atualizar'
+    btnApagar.className = 'btn-apagar'
 
+    linha.dataset.id = dados.id
+
+    colAcao.id = 'td-acao'
     colAcao.replaceChildren(btnAtualizar, btnApagar)
 
     linha.replaceChildren(

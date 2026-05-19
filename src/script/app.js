@@ -7,8 +7,19 @@ const contatos = await getContatos()
 const linhas = montarTabela(contatos)
 container.replaceChildren(...linhas)
 
-const btnAtualizar = document.getElementById('btn-atualizar')
-const btnApagar = document.getElementById('btn-apagar')
+const btnAtualizar = document.querySelectorAll('.btn-atualizar')
+const btnApagar = document.querySelectorAll('.btn-apagar')
 
-btnAtualizar.addEventListener('click', await putContato())
-btnApagar.addEventListener('click', await deleteContato())
+btnAtualizar.forEach(btn => {
+    btn.addEventListener('click', async (event) => {
+        const id = event.target.closest('tr').dataset.id
+        console.log(`atualizando id ${id}`)
+    })
+}) 
+
+btnApagar.forEach(btn => {
+    btn.addEventListener('click', async (event) => {
+        const id = event.target.closest('tr').dataset.id
+        console.log(`apagando id ${id}`)
+    })
+}) 
