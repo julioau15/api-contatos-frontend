@@ -41,8 +41,12 @@ const limparCampos = () => {
 }
 
 const apagarContato = async (id) => {
-    await deleteContato(id)
-    await atualizarPagina()   
+    const confirmacao = confirm('Deseja Apagar este Contato?')
+
+    if(confirmacao){
+        await deleteContato(id)
+        await atualizarPagina()   
+    }
 }
 
 await atualizarPagina()
